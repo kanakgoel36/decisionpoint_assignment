@@ -1,0 +1,13 @@
+
+
+<h2 style="text-align:center">Users</h2>
+<div style="margin:auto; width: 70%; margin-top: 30px;">
+    <app-search-bar (onSelectedOption)="onSelectedOption($event)"></app-search-bar>
+
+</div>
+<div *ngFor = "let users of user" class="group">
+  <p><b>Id :</b>{{users.id}}</p>
+  <p><b>Name :</b> {{users.name}}</p>
+  <p><b>Username: </b>{{users.username}}</p>
+  <button onClick="getPost(users.id)">Get Post</button>
+</div>
